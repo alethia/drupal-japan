@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Drupal Japan i18n Settings feature.
+ */
+
+include_once 'drupal_japan_i18n_settings.features.inc';

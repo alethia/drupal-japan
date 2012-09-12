@@ -1,3 +1,13 @@
+How To Contribute
+=================
+1. You must have a github account.  https://github.com
+2. Fork and Contribute to the poject https://help.github.com/articles/fork-a-repo
+3. Follow the steps below.
+4. Once you have made your changes you can then do a pull request: https://help.github.com/articles/using-pull-requests
+5. Once this is done, the development team will review the changes and the feature will be accepted or rejected. If rejected the user can issues with the aid of the development team.
+6. Once the code has been merged it will be pushed to the live site on the set release day.
+7. Kickback open a beer and be proud of yourself for giving back!
+
 Requirements
 ============
 * Web server: Apache 2.x.

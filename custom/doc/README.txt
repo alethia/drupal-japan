@@ -1,12 +1,31 @@
 How To Contribute
 =================
-1. You must have a github account.  https://github.com
-2. Fork and Contribute to the poject https://help.github.com/articles/fork-a-repo
+1. You must have a github account. https://github.com
+2. Fork and Contribute to the project. https://help.github.com/articles/fork-a-repo
 3. Follow the steps below.
-4. Once you have made your changes you can then do a pull request: https://help.github.com/articles/using-pull-requests
-5. Once this is done, the development team will review the changes and the feature will be accepted or rejected. If rejected the user can issues with the aid of the development team.
-6. Once the code has been merged it will be pushed to the live site on the set release day.
+4. Once you have made your changes you can then do a pull request:
+https://help.github.com/articles/using-pull-requests
+5. Once this is done, the development team will review the changes and the feature
+will be accepted or rejected. If rejected the user can issues with the aid of the
+development team.
+6. Once the code has been merged it will be pushed to the live site on the set
+release day.
 7. Kickback open a beer and be proud of yourself for giving back!
+
+Commiting
+=========
+A branch should be created when starting to work on a new story. Its name should
+look like feature/story-short-description-12345678 (12345678 being the story id. in
+Pivotal), "feature" being replaced by "bug" when fixing a bug that has its own
+story. When finished (and accepted if needed), the branch will be merged to
+staging to be sent for approval. When approved, same code will be merged in master.
+When commiting, be sure to add a usefull commit comment. You can also add the
+Pivotal story id. in the comment to make the commit appear in the story's log.
+Example:
+  [#12345678] Add an administration interface to my story.
+Optionnaly, if words like "fix", "fixes", "deliver", "delivers" (and others,
+to try) are added in the comment (example: [Fixes #12345678]), then the story's
+status will be automatically changed accordingly.
 
 Requirements
 ============
@@ -21,33 +40,30 @@ After cloning Git repository on your local file system, you need to build the
 source code with drush make:
  $ drush make custom/scripts/dcj.make
 
-Note : Before invoking drush make please make sure that folder www is writeable
+Note: before invoking drush make please make sure that folder www is writeable
 by you, otherwise drush cannot extract the downloaded files to the www directory.
 
-The file settings.php as been a bit tweaked, so you should input you database
+The settings.php file as been a bit tweaked, so you should input you database
 credentials manually by creating the file sites/default/db.settings.php.
  $ cp sites/default/example.db.settings.php sites/default/db.settings.php
  $ vim sites/default/db.settings.php
 
 Then, as everything is meant to be tracked on Git, you just need to install the
 website, either following the install process going to install.php with a web
-bowser, or using drush:
+browser, or using drush:
  $ drush site-install drupaljapan --account-pass=admin
 
-Note : 
-- Drush will create the table for you, no need to create table manually
-before invoking drush site-install
-
-- In windows environment, YOU WILL NEED to create the database manually
-if your path settings to mysql is not correct.
-
-- Watch out for "drupaljapan" in the command above, missing it will means drush
-will install drupal standard profiles.
+Drush make file
+===============
+This files describes all the modules, libraries, patches needed to run the site.
+Instead of keeping track of all contrib code in git repository, we only keep track
+of this make file. This should always describe precisely the modules used, their
+version (use "git" download type when using a dev version, which should be avoided
+as much as needed).
 
 Profile
 =======
-All Drupal custom code is placed inside a custom profile, located in
-/profiles
+All Drupal custom code is placed inside a custom profile, located in /profiles.
 
 Dependencies
 ============
@@ -63,8 +79,8 @@ in custom modules. Features can contain many configuration elements, such as
 content types, image presets, views, Drupal variables (thanks to Strongarm),
 and more.
 Features can contain custom code too, in their .module file (or any needed
-include file). Be sure to keep in a same module/feature all code related to a
-one fonctionnality, and nothing else.
+include file). Be sure to keep in a same module/feature all code related to one 
+fonctionnality, and nothing else.
 
 Custom modules
 ==============
@@ -78,17 +94,16 @@ Staying up-to-date
 ==================
 In development phase, be sure to regularly update your Git workspace (git pull),
 and to run make file again (using drush make command above). As new versions of
-modules can appear, make sure database is up-to-date to (drush updb).
+modules can appear, make sure database is up-to-date too (drush updb).
 During first development phase, installing the site from scratch is a good way
 to ensure nothing has been left out.
 
 Update phase
 =============
-As soon as the drupal.co.jp site has been made live, and we want to keep the data
+As soon as the drupal.co.jp site has been made live, and we want to keep the data,
 the website will not be installed from scratch anymore.
 This means update functions (hook_update_N) should be written. They may contain
 installation of new modules, features revert, or any needed custom code.
-From this moment, the make file should describe all project's versions.
 
 Hacking
 =======

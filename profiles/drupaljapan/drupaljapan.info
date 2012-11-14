@@ -27,6 +27,7 @@ dependencies[] = ctools
 dependencies[] = features
 dependencies[] = i18n
 dependencies[] = libraries
+dependencies[] = module_filter
 dependencies[] = pathauto
 dependencies[] = strongarm
 dependencies[] = views

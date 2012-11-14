@@ -42,6 +42,7 @@ projects[admin_menu] = 3.0-rc3
 projects[ctools] = 1.2
 projects[field_group] = 1.1
 projects[libraries] = 2.0
+projects[module_filter] = 1.7
 projects[pathauto] = 1.2
 projects[token] = 1.4
 projects[variable] = 2.1

@@ -32,7 +32,7 @@ Requirements
 * Web server: Apache 2.x.
 * Database server: MySQL 5.0.15 or higher with PDO.
 * PHP: 5.3 or higher.
-* Drush: Drush 4 with Drush Make, or Drush 5 and higher.
+* Drush: 5 and higher plus "Make POST" module (http://drupal.org/project/make_post).
 
 Project installation
 ====================

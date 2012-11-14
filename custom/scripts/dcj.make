@@ -75,4 +75,16 @@ libraries[tinymce][download][type] = "file"
 libraries[tinymce][download][url] = "http://github.com/downloads/tinymce/tinymce/tinymce_3.5.7.zip"
 libraries[tinymce][directory_name] = "tinymce"
 
+; TinyMCE Japanese language pack (JS export)
+; Needs Drush 5 and its sub-module make_post
+libraries[tinymce_ja][download][type] = "post"
+libraries[tinymce_ja][download][url] = "http://www.tinymce.com/i18n/index.php?ctrl=export&act=zip"
+libraries[tinymce_ja][download][data] = "la[]=ja&la_export=js&pr_id=7&submitted=Download"
+; Force filename so Drush Make unzips it
+libraries[tinymce_ja][download][filename] = "tinymce_ja.zip"
+; The two following lines are telling drush make to put the archive files in libraries/tinymce/jscripts/tiny_mce
+libraries[tinymce_ja][destination] = "libraries/tinymce/jscripts"
+libraries[tinymce_ja][directory_name] = "tiny_mce"
+; Allow drush make to install librairies[tinymce_ja] inside a non empty directory
+libraries[tinymce_ja][overwrite] = TRUE
 

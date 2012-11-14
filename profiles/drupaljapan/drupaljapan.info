@@ -1,26 +1,37 @@
-name = Druapl Japan 
-description = Install drupal.co.jp instlation profile
+name = Drupal Japan 
+description = Drupal.co.jp installation profile
 version = 0.1
 core = 7.x
+
+; Core dependencies
 dependencies[] = block
-dependencies[] = color
 dependencies[] = comment
 dependencies[] = contextual
-dependencies[] = dashboard
-dependencies[] = help
-dependencies[] = image
-dependencies[] = list
-dependencies[] = menu
-dependencies[] = number
-dependencies[] = options
-dependencies[] = path
-dependencies[] = taxonomy
 dependencies[] = dblog
-dependencies[] = search
-dependencies[] = shortcut
-dependencies[] = toolbar
-dependencies[] = overlay
 dependencies[] = field_ui
 dependencies[] = file
+dependencies[] = help
+dependencies[] = image
+dependencies[] = locale
+dependencies[] = menu
+dependencies[] = options
+dependencies[] = overlay
+dependencies[] = path
 dependencies[] = rdf
+dependencies[] = search
+dependencies[] = taxonomy
+
+; Contrib dependencies
+dependencies[] = admin_menu_toolbar
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = i18n
+dependencies[] = libraries
+dependencies[] = pathauto
+dependencies[] = strongarm
+dependencies[] = views
+dependencies[] = views_ui
+dependencies[] = wysiwyg
+
+; Custom dependencies
 dependencies[] = drupal_japan_i18n_settings

@@ -1,0 +1,38 @@
+# Ignore all core Drupal files.
+/*.*
+/includes
+/misc
+/modules
+/scripts
+/themes
+/translations
+/profiles/*
+/sites/default/*
+/sites/*/modules/*
+/sites/*/themes/*
+/sites/*/libraries/*
+/sites/README.txt
+/sites/all/README.txt
+/sites/example.sites.php
+
+# Don't ignore .gitignore (!)
+!/.gitignore
+
+# Exceptions inside Drupal files (custom code).
+# Needed only when you can't put your custom code in the profile
+# (multi-profile project).
+#!/sites/*/modules/custom
+#!/sites/*/themes/custom
+#!/sites/*/libraries/custom
+
+# You will want to use your custom profile's real name below.
+!/profiles/drupaljapan
+
+# We tweaked settings.php so that it does not contain database credentials,
+# and can be commited to Git repository.
+!/sites/*/*settings.php
+/sites/*/db.settings.php
+/sites/default/default.settings.php
+
+# Uncomment following line if modifying Drupal's .htaccess ?
+#!/.htaccess
